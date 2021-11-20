@@ -1,1 +1,4 @@
-dummy_text_file.txt
+# Ignore the below folders
+.vscode
+
+# Ignore the below files
