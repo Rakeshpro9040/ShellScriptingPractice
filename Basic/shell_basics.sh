@@ -229,15 +229,45 @@ test_file='/home/mylocallinux/GitHub/ShellScriptingPractice/Basic/test.txt'
 ############# Nested Loops #############
 
 ## Nested While Loop
+# a=0
+# while [ "$a" -lt 10 ]; do # this is loop1
+#     b="$a"
+#     while [ "$b" -ge 0 ]; do # this is loop2
+#         echo -n "$b "
+#         b=$(expr $b - 1)
+#     done
+#     echo # This is for new line
+#     a=$(expr $a + 1)
+# done
+
+# Test: ./shell_basics.sh
+# Output:
+
+###########################################
+
+############# Loop Control #############
+
+## break
 a=0
-while [ "$a" -lt 10 ]; do # this is loop1
-    b="$a"
-    while [ "$b" -ge 0 ]; do # this is loop2
-        echo -n "$b "
-        b=$(expr $b - 1)
-    done
-    echo # This is for new line
+
+while [ $a -lt 10 ]; do
+    echo $a
+    if [ $a -eq 5 ]; then
+        break
+    fi
     a=$(expr $a + 1)
+done
+
+## continue
+NUMS="1 2 3 4 5 6 7"
+
+for NUM in $NUMS; do
+    Q=$(expr $NUM % 2)
+    if [ $Q -eq 0 ]; then
+        echo "Number is an even number!!"
+        continue
+    fi
+    echo "Found odd number"
 done
 
 # Test: ./shell_basics.sh
