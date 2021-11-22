@@ -46,9 +46,9 @@ clear
 # Test: ./shell_basics.sh "Rakesh Panigrahi 26 Years Old"
 
 # Exit Status
-pwd
-cat test1.txt
-echo $?
-cat test.txt
-echo $?
+# pwd
+# cat test1.txt
+# echo $?
+# cat test.txt
+# echo $?
 # Test: ./shell_basics.sh
