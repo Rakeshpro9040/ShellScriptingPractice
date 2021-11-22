@@ -13,7 +13,7 @@ test_file='/home/mylocallinux/GitHub/ShellScriptingPractice/Basic/test.txt'
 ## Dummy Heading
 # Dummy Sub-Heading
 
-# Test:
+# Test: ./shell_basics.sh
 # Output:
 
 ###########################################
@@ -102,90 +102,145 @@ test_file='/home/mylocallinux/GitHub/ShellScriptingPractice/Basic/test.txt'
 ## Arithmetic Operators
 # expr
 # legacy
-val=`expr 2 + 2`
-echo "Total value : $val"
+# val=`expr 2 + 2`
+# echo "Total value : $val"
 
 # new
-val=$(expr 2 + 2)
-echo "Total value : $val"
+# val=$(expr 2 + 2)
+# echo "Total value : $val"
 
-val=$((2 + 2))
-echo "Total value : $val"
+# val=$((2 + 2))
+# echo "Total value : $val"
 
 # conditional (Comparison)
-a=5
-b=5
-if [ $a == $b ]; then
-    echo 'a is equal to b'
-fi
+# a=5
+# b=5
+# if [ $a == $b ]; then
+#     echo 'a is equal to b'
+# fi
 
 ## Relational Operators
 # Numeric Relational Operators
-a=6
-b=5
-if [ $a -ge $b ]; then
-    echo 'a is greater than b'
-fi
+# a=6
+# b=5
+# if [ $a -ge $b ]; then
+#     echo 'a is greater than b'
+# fi
 
 # String Relational Operators
-str1='ABC'
-str2='abc'
-if [ $str1 != $str2 ]; then
-    echo 'a is not equal to b'
-fi
+# str1='ABC'
+# str2='abc'
+# if [ $str1 != $str2 ]; then
+#     echo 'a is not equal to b'
+# fi
 
 ## Boolean Operators
 # method-1
-if [ $a -ge $b -a $str1 != $str2 ]; then
-    echo 'both the conditions statisfied.'
-fi
+# if [ $a -ge $b -a $str1 != $str2 ]; then
+#     echo 'both the conditions statisfied.'
+# fi
 
 # method-2
-if [ $a -ge $b ] && [ $str1 != $str2 ]; then
-    echo 'both the conditions statisfied.'
-fi
+# if [ $a -ge $b ] && [ $str1 != $str2 ]; then
+#     echo 'both the conditions statisfied.'
+# fi
 
 ## String Operators
-str1=''
-if [[ -z $str1 ]]; then
-    echo 'str1 is zero in size'
-fi
+# str1=''
+# if [[ -z $str1 ]]; then
+#     echo 'str1 is zero in size'
+# fi
 
-str1='ABC'
-if [[ -n $str1 ]]; then
-    echo 'str1 is non-zero in size'
-fi
+# str1='ABC'
+# if [[ -n $str1 ]]; then
+#     echo 'str1 is non-zero in size'
+# fi
 
 ## File Test Operators
-cat $test_file
-if [ -e $test_file ]
-then
-    echo "File exists"
-else
-    echo "File does not exist"
-fi
+# cat $test_file
+# if [ -e $test_file ]
+# then
+#     echo "File exists"
+# else
+#     echo "File does not exist"
+# fi
 
-if [ -s $test_file ]
-then
-    echo "File size is not zero"
-else
-    echo "File size is zero"
-fi
+# if [ -s $test_file ]
+# then
+#     echo "File size is not zero"
+# else
+#     echo "File size is zero"
+# fi
 
-if [ -x $test_file ]
-then
-    echo "File has execute permission"
-else
-    echo "File does not have execute permission"
-fi
+# if [ -x $test_file ]
+# then
+#     echo "File has execute permission"
+# else
+#     echo "File does not have execute permission"
+# fi
 
-if [ -d $test_file ]
-then
-    echo "File is a directory"
-else
-    echo "This is not a directory"
-fi
+# if [ -d $test_file ]
+# then
+#     echo "File is a directory"
+# else
+#     echo "This is not a directory"
+# fi
 
 # Test: ./shell_basics.sh
+
+###########################################
+
+############# Decision Making #############
+
+## if...else statement
+# a=10
+# b=20
+
+# if [ $a == $b ]; then
+#     echo "a is equal to b"
+# elif [ $a -gt $b ]; then
+#     echo "a is greater than b"
+# elif [ $a -lt $b ]; then
+#     echo "a is less than b"
+# else
+#     echo "None of the condition met"
+# fi
+
+## case...esac statement
+# FRUIT="kiwi"
+
+# case "$FRUIT" in
+# "apple")
+#     echo "Apple pie is quite tasty."
+#     ;;
+# "banana")
+#     echo "I like banana nut bread."
+#     ;;
+# "kiwi")
+#     echo "New Zealand is famous for kiwi."
+#     ;;
+# esac
+
+# Test: ./shell_basics.sh
+# Output:
+
+###########################################
+
+############# Nested Loops #############
+
+## Nested While Loop
+a=0
+while [ "$a" -lt 10 ]; do # this is loop1
+    b="$a"
+    while [ "$b" -ge 0 ]; do # this is loop2
+        echo -n "$b "
+        b=$(expr $b - 1)
+    done
+    echo # This is for new line
+    a=$(expr $a + 1)
+done
+
+# Test: ./shell_basics.sh
+# Output:
 
 ###########################################
