@@ -1,9 +1,11 @@
-#!/bin/sh
+#!/bin/bash
 
 # Author : Rakesh
 
 # Clear Output
 clear
+
+############# Scalar Variables #############
 
 # Read and Print
 # echo 'what is your name?'
@@ -52,3 +54,32 @@ clear
 # cat test.txt
 # echo $?
 # Test: ./shell_basics.sh
+
+###########################################
+
+############# Array Varaibles #############
+
+# Defining Array Values
+# single item Initialize
+NAME[0]='Rakesh'
+NAME[1]='Roshan'
+NAME[2]='Panigrahi'
+
+# multiple items Initialize
+NAME_N=('Rakesh' 'Roshan' 'Panigrahi')
+
+# Accessing Array Values
+# single item
+echo "First Index: ${NAME[0]}"
+echo "Second Index: ${NAME[1]}"
+
+echo "First Index: ${NAME_N[0]}"
+echo "Second Index: ${NAME_N[1]}"
+
+# multiple items
+echo "NAME: ${NAME[*]}"
+echo "NAME_N: ${NAME_N[@]}"
+echo $?
+# Test: ./shell_basics.sh
+
+###########################################
