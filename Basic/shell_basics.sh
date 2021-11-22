@@ -25,3 +25,30 @@ clear
 # echo "Name: $NAME"
 # unset NAME
 # echo "Name: $NAME"
+
+# Command-Line Arguments
+# echo "File Name: $0"
+# echo "First Parameter : $1"
+# echo "Second Parameter : $2"
+# echo "Quoted Values: $*"
+# echo "Quoted Values: $@"
+# echo "Total Number of Parameters : $#"
+# Test: ./shell_basics.sh Rakesh Panigrahi
+
+# Special Parameters $* and $@
+# for TOKEN in "$@"; do
+#     echo "$TOKEN"
+# done
+# for TOKEN in $*; do
+#     echo "$TOKEN"
+# done
+# Test: ./shell_basics.sh Rakesh Panigrahi 26 Years Old
+# Test: ./shell_basics.sh "Rakesh Panigrahi 26 Years Old"
+
+# Exit Status
+pwd
+cat test1.txt
+echo $?
+cat test.txt
+echo $?
+# Test: ./shell_basics.sh
