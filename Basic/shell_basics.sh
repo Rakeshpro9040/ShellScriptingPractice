@@ -248,27 +248,65 @@ test_file='/home/mylocallinux/GitHub/ShellScriptingPractice/Basic/test.txt'
 ############# Loop Control #############
 
 ## break
-a=0
+# a=0
 
-while [ $a -lt 10 ]; do
-    echo $a
-    if [ $a -eq 5 ]; then
-        break
-    fi
-    a=$(expr $a + 1)
-done
+# while [ $a -lt 10 ]; do
+#     echo $a
+#     if [ $a -eq 5 ]; then
+#         break
+#     fi
+#     a=$(expr $a + 1)
+# done
 
 ## continue
-NUMS="1 2 3 4 5 6 7"
+# NUMS="1 2 3 4 5 6 7"
 
-for NUM in $NUMS; do
-    Q=$(expr $NUM % 2)
-    if [ $Q -eq 0 ]; then
-        echo "Number is an even number!!"
-        continue
-    fi
-    echo "Found odd number"
-done
+# for NUM in $NUMS; do
+#     Q=$(expr $NUM % 2)
+#     if [ $Q -eq 0 ]; then
+#         echo "Number is an even number!!"
+#         continue
+#     fi
+#     echo "Found odd number"
+# done
+
+# Test: ./shell_basics.sh
+# Output:
+
+###########################################
+
+############# Substitution #############
+
+## Command Substitution
+# DATE=$(date)
+# echo "Date is $DATE"
+
+# USERS=$(who | wc -l)
+# echo "Logged in user are $USERS"
+
+# UP=$(
+#     date
+#     uptime
+# )
+# echo "Uptime is $UP"
+
+## Variable Substitution
+# echo ${var:-"Variable is not set"}
+# echo "1 - Value of var is ${var}"
+
+# echo ${var:="Variable is not set"}
+# echo "2 - Value of var is ${var}"
+
+# unset var
+# echo ${var:+"This is default value"}
+# echo "3 - Value of var is $var"
+
+# var="Prefix"
+# echo ${var:+"This is default value"}
+# echo "4 - Value of var is $var"
+
+# echo ${var:?"Print this message"}
+# echo "5 - Value of var is ${var}"
 
 # Test: ./shell_basics.sh
 # Output:

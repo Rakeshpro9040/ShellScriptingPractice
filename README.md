@@ -8,3 +8,7 @@ git status
 git -a -m "commit_message"
 git push -u origin main
 git pull origin main
+
+# Shell Commands
+cd /home/mylocallinux/GitHub/ShellScriptingPractice/Basic
+cd /home/mylocallinux/GitHub/ShellScriptingPractice/Advance
