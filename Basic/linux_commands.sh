@@ -18,6 +18,7 @@ clear
 
 ############# Getting Started #############
 ## Change Password
+# password will stored in /etc/shadow
 # passwd
 
 ## Show Date and Time
@@ -55,6 +56,10 @@ clear
 # ls
 
 # ls supports the -l option which would help you to get more information about the listed files
+# Here in the first column, the first character denotes
+#        whether a file is a normal file or mkdir "directory name"
+#        file is denoted by -
+#        directory is denoted by d.
 # ls -l
 
 ## Metacharacters
@@ -121,6 +126,128 @@ clear
 
 ########## Directory Management ###########
 
+## Home Directory
+# To determine where you are within the filesystem hierarchy at any time
+# pwd
+
+## Here ~ indicates the home directory.
+# cd ~
+# pwd
+
+## Other user's home directory
+# cd ~username
+
+## To go in your last directory
+# cd -
+# pwd
+
+## . and ..
+# The filename . (dot) represents the current working directory
+# cd .
+# pwd
+# The filename .. (dot dot) represents the directory one level above the current working directory, 
+#       often referred to as the parent directory.
+# cd ../..
+# pwd
+
+## Absolute/Relative Pathnames
+# Absolute
+# cd /home/rakesh/Desktop/GitHub/ShellScriptingPractice/Basic
+# pwd
+
+# Relative
+# cd Basic
+# pwd
+
+## Listing Directories
+# ls Basic
+
+## Creating Directories
+# mkdir test_dir1
+
+## Creating Parent Directories
+# Sometimes when you want to create a directory, its parent directory or directories might not exist.
+# The below command creates all the required parent directories.
+# mkdir -p /home/rakesh/Desktop/GitHub/ShellScriptingPractice/test_dir2/test_dir3
+
+## Removing Directories
+# rmdir test_dir1
+
+## Renaming Directories
+# mv olddir newdir
+
+
+###########################################
+
+###### File Permission / Access Modes #####
+
+## Changing Permissions
+# To change the file or the directory permissions, you use the chmod (change mode) command.
+# u - user/file's owner
+# g - group
+# o - other
+
+# Using chmod in Symbolic Mode
+# + Adds the designated permission(s) to a file or directory.
+# - Removes the designated permission(s) from a file or directory.
+# = Sets the designated permission(s).
+# The below command will add execute permission to owner
+# chmod u+x test.txt
+# chmod u=rwx test.txt
+# The below command will add execute permission to group
+# chmod g+x test.txt
+# The below command will add execute permission to other
+# chmod o+x test.txt
+# The below command will give combine execute access 
+# chmod u+x,g+x,o+x test.txt
+# chmod +x test.txt
+# The below command will remove execute permission from all
+# chmod -x test.txt
+
+# Using chmod with Absolute Permissions
+# 4 (read)
+# 2 (write)
+# 1 (execute)
+# 0	= --- = No permissions
+# 7	= rwx = All permissions
+# The below command will set -rwxrwxr-x
+# chmod 775 test.txt
+# The below command will set -rw-rw-r--
+# chmod 664 test.txt
+
+## Changing Owners and Groups
+# Changing Ownership
+# chown − The chown command stands for "change owner" and is used to change the owner of a file.
+# The value of the user can be either the name of a user on the system or the user id (uid) of a user on the system.
+# sudo chown user filelist
+# sudo chown root test.txt
+
+# Changing Group Ownership
+# chgrp − The chgrp command stands for "change group" and is used to change the group of a file.
+# The value of group can be the name of a group on the system or the group ID (GID) of a group on the system.
+# chgrp group filelist
+# sudo chgrp root test.txt
+# sudo chgrp rakesh test.txt
+
+## SUID and SGID File Permission
+# s and S are called as "Sticky bit"
+# The SUID and SGID bits will appear as the letter "s" if the permission is available. 
+# A capital letter S in the execute position instead of a lowercase s indicates that the execute bit is not set.
+# The SUID "s" bit will be located in the permission bits where the owners' execute permission normally resides.
+# The SGID "s" bit will be located in the permission bits where the groups' execute permission normally resides.
+# ls -l /usr/bin/passwd
+# Output: -rwsr-xr-x 1 root root 68208 Jul 15 03:38 /usr/bin/passwd
+
+# If the sticky bit is enabled on the directory, files can only be removed
+#   if you are - The owner of the sticky directory/
+#   The owner of the file being removed/
+#   The super user, root
+# To set the SUID and SGID bits for any directory
+# chmod ug+s dirname
+
+###########################################
+
+############### Environment ###############
 
 
 
@@ -200,5 +327,15 @@ clear
 #       Using awk command also we can do the same thing.
 # In the below command r means recurrsive, i to ignore case, l to print mathcing lines 
 # grep -irl "is a test file"
+
+## Change user
+# su username
+# su rakesh
+
+# Change to root user
+# sudo -su
+
+## Run a command using root access
+# sudo command_name
 
 ###########################################
