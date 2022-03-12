@@ -2,3 +2,9 @@
 .vscode
 
 # Ignore the below files
+test_file*
+infinite_loop.sh
+tempCodeRunnerFile.sh
+
+# Ignore the below directories
+test_dir*

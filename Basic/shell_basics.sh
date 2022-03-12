@@ -6,7 +6,7 @@
 clear
 
 # Global Variables
-test_file='/home/mylocallinux/GitHub/ShellScriptingPractice/Basic/test.txt'
+# test_file='/home/mylocallinux/GitHub/ShellScriptingPractice/Basic/test.txt'
 
 ############# Dummy Chapter #############
 
