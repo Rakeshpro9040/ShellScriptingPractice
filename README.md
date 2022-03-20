@@ -5,7 +5,7 @@ Basic Linux Commands: /Basic/linux_commands.sh
 Basic Shell Scripting: /Basic/shell_basics.sh
 
 ## Git Commands
-
+- For Git Add and Commit, you may use UI, But for Git Pull/Push use Terminal only.
 git status
 git -a -m "commit_message"
 git push -u origin main
