@@ -338,6 +338,7 @@ clear
 # p: Puts the copied text after the cursor
 # u: single undo
 # U: Undo all
+# Ctrl + r: Redo changes
 # /: Search forward
 # ?: Search backwward
 # \: Escape character
