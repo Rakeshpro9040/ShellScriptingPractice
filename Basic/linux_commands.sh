@@ -172,6 +172,8 @@ clear
 
 ## Removing Directories
 # rmdir test_dir1
+# rmdir -r /full-path: To remove an non-empty table (remove recursively)
+# rmdir -rf /full-path: To remove an non-empty table (remove recursively & forecfully)
 
 ## Renaming Directories
 # mv olddir newdir
