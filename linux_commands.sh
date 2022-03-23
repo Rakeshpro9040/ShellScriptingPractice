@@ -265,7 +265,7 @@ clear
 
 ###########################################
 
-############### Basic Utilities - Printing, Email ###############
+#### Basic Utilities - Printing, Email ####
 
 ## Printing File
 # pr option(s) filename(s): To display report before print (Refer to tehe doc)
@@ -311,12 +311,68 @@ clear
 
 ###########################################
 
-############### Processes Management ###############
+########### Processes Management ##########
+# Foreground process: runs on the screen by user
+# Background process: runs in the background scripts
+# pid: process ID: The operating system tracks processes through this 5 digit ID
+# ls *.sh &: To run a process in background use & at the end of the command and hit ENTER
 
+## List running processes
+# ps -f: full(f) information about the process-status(ps)
+    # UID: User ID that this process belongs to (the person running it)
+    # PID: Process ID (Child)
+    # PPID: Parent process ID (the ID of the process that started it) (Parent)
+    # C: CPU utilization of process
+    # STIME: Process start time
+    # TTY: Terminal type associated with the process
+    # TIME: CPU time taken by the process
+    # CMD: The command that started this process
+# -a: Shows information about all users
+# -x: Shows information about processes without terminals
+# -u: Shows additional information like -f option
+# -e: Displays extended information
+# ps -ef: Displays information about all users (including root)
+
+## Stopping processes
+# Ctrl + C: Kill a foreground process
+		# Control + Z is used for suspending a process by sending it the signal SIGSTOP , which cannot be intercepted by the program. While Control + C is used to kill a process with the signal SIGINT , and can be intercepted by a program so it can clean its self up before exiting, or not exit at all.
+        # Test this by running top command. Ctrl + C will end the process, hence there will be no log in ps table, but Ctrl + Z will only stop the foreground process keeping the background process active, hence you will be able to see and entry in the ps table.
+# kill -9 PID: Force kill of a background process
+
+# Zombie Processes: Process execution is done, but still entery is there in process table 
+# Orphan Processes: Parnet is killed, but childs are active, in this case new Parent will be Parnet's Parent
+# Daemon Process: TTY for therse will be ? in ps (can not open /dev/tty). Runs in background and triggers only when required, eg: Printing daemon.
+
+# top: It is an interactive diagnostic tool that updates frequently and shows information about physical and virtual memory, CPU usage, load averages, and your busy processes.
 
 ###########################################
 
-############### Network Communication Utilities ###############
+#### Network Communication Utilities ######
+
+## ping
+# ping hostname or ip-address: To check if your remote host is responding well or not, to terminate hit Ctrl + C
+
+## ftp
+# This utility helps you upload and download your file from one computer to another computer.
+## ftp hostname or ip-address: Connect to the host via authentication (username and password)
+# put: Uploads filename from the local machine to the remote machine.
+# get: Downloads filename from the remote machine to the local machine.
+# mput: Uploads more than one file from the local machine to the remote machine.
+# mget: Downloads more than one file from the remote machine to the local machine.
+# prompt on/off: Turns the prompt on/off. By default, you will receive a prompt to upload or download files using mput or mget commands.
+# dir: Lists all the files available in the current directory of the remote machine. (=ls)
+# cd: Changes directory to dirname on the remote machine.
+# lcd: Changes directory to dirname on the local machine.
+# quit: Helps logout from the current login.
+
+## telnet
+# Telnet is a utility that allows a computer user at one site to make a connection, login and then conduct work on a computer at another site.
+# telent hostname or ip-address: Connect to the remote server
+
+## finger
+# The finger command displays information about users on a given host. The host can be either local or remote.
+# finger user_name: local
+# finger user_name@hostname: remote
 
 
 ###########################################
@@ -362,43 +418,43 @@ clear
 
 ###########################################
 
-#################### Regular Expressions with SED #################
+###### Regular Expressions with SED #######
 
 
 ###########################################
 
-#################### File System Basics #################
+######### File System Basics ##############
 
 
 ###########################################
 
-#################### User Administration #################
+########## User Administration ############
 
 
 ###########################################
 
-#################### System Performance #################
+######### System Performance ##############
 
 
 ###########################################
 
 
-#################### System Logging #################
+############ System Logging ###############
 
 
 ###########################################
 
-#################### Signals and Traps #################
+########## Signals and Traps ##############
 
 
 ###########################################
 
-#################### Useful Commands #################
+########### Useful Commands ###############
 
 
 ###########################################
 
-#################### Shell Builtin Mathematical Functions #################
+### Shell Builtin Mathematical Functions ##
 
 
 ###########################################
