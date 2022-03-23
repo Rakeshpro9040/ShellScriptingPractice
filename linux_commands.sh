@@ -251,6 +251,154 @@ clear
 
 ############### Environment ###############
 
+# PS1='[\W] $': This will change the Shell Prompt to show the "[working_dir]$" from "$"
+# To find more options for PS1 refer to the tutorialspoint doc.
+# PS2='~': This will change the New Line Prompt to '~' from '>'
+# echo $PATH: Indicates the search path for commands. It is a colon-separated list of directories in which the shell looks for commands.
+# echo $HOME: Home directory
+# echo $TERM: Refers to the display type.
+# echo $RANDOM: Generates a random integer between 0 and 32,767 each time it is referenced.
+# echo $SHLVL: Increments by one each time an instance of bash is started. This variable is useful for determining whether the built-in exit command ends the current session.
+# echo $LANG: LANG expands to the default system locale. Ex: en_US.UTF-8
+# echo $TZ: Refers to Time zone. It can take values like GMT, AST, etc.
+# echo $UID: Expands to the numeric user ID of the current user, initialized at the shell startup.
+
+###########################################
+
+############### Basic Utilities - Printing, Email ###############
+
+## Printing File
+# pr option(s) filename(s): To display report before print (Refer to tehe doc)
+# lp or lpr: prints a file onto paper as opposed to the screen display (Refer to tehe doc)
+
+## Sending Email
+# mail: Too check incoming mails
+# mail [-s subject] [-c cc-addr] [-b bcc-addr] to-addr: To send and receive mail. 
+# Email List should be a commaseparated list of names.
+# Testing with dummy mails
+# mail -s "Mail from UNIX" rrp9861@gmail.com < test.txt
+# echo "Hi,This is from CyberITHub" | sudo sendmail -s "Test Email" rrp9861@gmail.com
+
+###########################################
+
+############### Pipes and Filters ###############
+# Pipe: You can connect two commands together so that the output from one program becomes the input of the next program, use | to conect two commands.
+# Filter: When a program takes its input from another program, it performs some operation on that input, and writes the result to the "Standard Output". It is referred to as a filter.
+
+## grep Command
+# Note: For Regular Expression, check OneNote >> Programming >> Misc >> Misc languages
+# fullform: globally search for a regular expression and print all lines containing it.
+# The grep command searches a file or files for lines that have a certain pattern.
+# ls -l | grep "Mar": To peint all the files modified in March.
+# ls -l | grep -v "Mar": -v prints all lines that do not match pattern.
+# -n: prints the matched line and its line number.
+# -I: prints only the names of files with matching lines (letter "I")
+# -i: matches either upper or lowercase.
+# -c: prints only the count of matching lines.
+# ls -l | grep -i "linux.*mar": line contains linux.*aug pattern (.*: denotes any char n number of time)
+
+## sort Command
+# sort filename: arranges lines of text alphabetically or numerically.
+# -n: sorts numerically (example: 10 will sort after 2), ignores blanks and tabs.
+# -r: Reverses the order of sort.
+# -f: Sorts upper and lowercase together.
+# -kx: Ignores first x fields when sorting.
+# sort -nk4: sort numerically from field 5th field
+
+## more Commands
+# To print only a prtion of a file on the screen unlike vi or cat command who displays all the content.
+
+
+###########################################
+
+############### Processes Management ###############
+
+
+###########################################
+
+############### Network Communication Utilities ###############
+
+
+###########################################
+
+############# VI Editor #############
+# https://www.tutorialspoint.com/unix/unix-vi-editor.htm
+# view filename - open the file in read-only
+# ~: means empty line
+# ESC(twice): Enter into Command Mode
+# :2: Takes the cursor to 2nd line
+# 0: Position the cursor at the beginning of line
+# $: Position the cursor at the end of line
+# H: Move to the top of the screen
+# L: Move to the bottom of the screen
+# i: Enter into Insert Mode
+# :w: Save the changes
+# :q: Quit from VI
+# :q!: Force Quit (without any changes)
+# :wq: Save the Changes and Quit
+# ZZ: Save the Changes and Quit (Same as :wq)
+# x: Deletes the character under the cursor location
+# X: Deletes the character before the cursor location
+# d^: Deletes from the current cursor position to the beginning of the line
+# d$: Deletes from the current cursor position to the end of the line
+# D: Delete the current line, but keep the empty line
+# dd: Delete the current line and remove the empty line
+# yy: Copies the current line
+# p: Puts the copied text after the cursor
+# u: single undo
+# U: Undo all
+# Ctrl + r: Redo changes
+# /: Search forward
+# ?: Search backwward
+# \: Escape character
+# /^: Search the word at the beginning
+# $: Search at the end
+# .: Search single char
+# *: Matches zero or more of the previous character.
+# [: Starts a set of matching or non-matching expressions.
+# f/F: Search character on the current line
+# :!ls: execute ls command inside VI
+# :s/search/replace/g: replace text globally on the current line
+
+###########################################
+
+#################### Regular Expressions with SED #################
+
+
+###########################################
+
+#################### File System Basics #################
+
+
+###########################################
+
+#################### User Administration #################
+
+
+###########################################
+
+#################### System Performance #################
+
+
+###########################################
+
+
+#################### System Logging #################
+
+
+###########################################
+
+#################### Signals and Traps #################
+
+
+###########################################
+
+#################### Useful Commands #################
+
+
+###########################################
+
+#################### Shell Builtin Mathematical Functions #################
 
 
 ###########################################

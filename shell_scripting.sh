@@ -275,7 +275,7 @@ clear
 
 ###########################################
 
-############# Substitution #############
+############# Shell Substitution #############
 
 ## Command Substitution
 # DATE=$(date)
@@ -312,43 +312,25 @@ clear
 # Output:
 ###########################################
 
-############# VI Editor #############
-# https://www.tutorialspoint.com/unix/unix-vi-editor.htm
-# view filename - open the file in read-only
-# ~: means empty line
-# ESC(twice): Enter into Command Mode
-# :2: Takes the cursor to 2nd line
-# 0: Position the cursor at the beginning of line
-# $: Position the cursor at the end of line
-# H: Move to the top of the screen
-# L: Move to the bottom of the screen
-# i: Enter into Insert Mode
-# :w: Save the changes
-# :q: Quit from VI
-# :q!: Force Quit (without any changes)
-# :wq: Save the Changes and Quit
-# ZZ: Save the Changes and Quit (Same as :wq)
-# x: Deletes the character under the cursor location
-# X: Deletes the character before the cursor location
-# d^: Deletes from the current cursor position to the beginning of the line
-# d$: Deletes from the current cursor position to the end of the line
-# D: Delete the current line, but keep the empty line
-# dd: Delete the current line and remove the empty line
-# yy: Copies the current line
-# p: Puts the copied text after the cursor
-# u: single undo
-# U: Undo all
-# Ctrl + r: Redo changes
-# /: Search forward
-# ?: Search backwward
-# \: Escape character
-# /^: Search the word at the beginning
-# $: Search at the end
-# .: Search single char
-# *: Matches zero or more of the previous character.
-# [: Starts a set of matching or non-matching expressions.
-# f/F: Search character on the current line
-# :!ls: execute ls command inside VI
-# :s/search/replace/g: replace text globally on the current line
+############# Quoting Mechanisms #############
+
+###########################################
+
+############# Input/Output Redirections #############
+
+###########################################
+
+############# Functions #############
+
+###########################################
+
+############# Manpage Help #############
+
+###########################################
+
+
+############# Misc #############
+
+###########################################
 
 ###########################################
