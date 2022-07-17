@@ -12,3 +12,9 @@ git merge local-branch-fix
 
 cd rakesh@RakeshUbuntu:~/Desktop/GitHub/ShellScriptingPractice
 cd /home/mylocallinux/GitHub/ShellScriptingPractice/
+cd ./shell-scripting-jason/shell-scripting-course/practice-rrp
+
+## shell-scripting-jason
+https://www.udemy.com/course/shell-scripting-linux/
+Course Name: Shell Scripting: Discover How to Automate Command Line Tasks
+Tutor: Jason Cannon
